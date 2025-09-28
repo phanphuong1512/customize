@@ -1,0 +1,323 @@
+/* =============================================================================
+   VS CODE CUSTOM THEME - CLEAN VERSION
+   =============================================================================
+   Author: Custom Theme
+   Description: Clean and organized VS Code custom styling
+   ============================================================================= */
+
+/* =============================================================================
+   1. GLOBAL FONT SETTINGS
+   ============================================================================= */
+
+/* Base monospace font stack for consistent typography */
+:root {
+    --mono-font-stack: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --mono-font-size: 14px;
+    --mono-font-weight: 400;
+}
+
+/* Code comment style with italic font */
+.mtk3 {
+    font-family: 'Monaspace Radon', monospace !important;
+    font-style: italic !important;
+    color: #008c7d !important;
+}
+
+/* =============================================================================
+   2. EDITOR STYLES
+   ============================================================================= */
+
+/* Code canvas top shadow */
+.monaco-editor .scroll-decoration {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .75) !important;
+    top: -6px !important;
+}
+
+/* Match Text highlighting */
+.currentFindMatchInline {
+    background: #000 !important;
+}
+
+/* Sidebar top shadow */
+.monaco-scrollable-element > .shadow.top {
+    box-shadow: 0px 0px 10px rgba(0,0,0,.75) !important;
+    top: -3px !important;
+}
+
+/* Scroll Bar styling */
+.slider {
+    position: absolute !important;
+    right: 1px !important;
+    width: 1px !important;
+    background: #bc9abc !important;
+    left: auto !important;
+}
+
+/* Tooltip box styling */
+.monaco-editor-hover,
+.monaco-hover {
+    box-shadow: 0px 8px 32px rgba(0,0,0,.45) !important;
+    background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
+    backdrop-filter: blur(3px) !important;
+    border-radius: 16px !important;
+    border: none !important;
+    outline: 0px !important;
+}
+
+.monaco-resizable-hover {
+    border: none !important;
+}
+
+/* =============================================================================
+   3. SIDEBAR STYLES
+   ============================================================================= */
+
+/* Sidebar main container */
+.part.sidebar {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, .25);
+}
+
+/* File Explorer Selected Item */
+.monaco-list.list_id_1 .monaco-list-row.selected {
+    background-color: #4f5971 !important;
+    opacity: 1 !important;
+    border-top: 1px #727b90 solid;
+    border-bottom: 1px #727b90 solid;
+}
+
+/* Hide chevron icons */
+.codicon-tree-item-expanded:before {
+    display: none !important;
+}
+
+/* Selected item label styling */
+.monaco-list.list_id_1 .monaco-list-row.selected .label-name {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+
+/* File explorer action buttons */
+.monaco-workbench .part.sidebar .title-actions .actions-container {
+    display: none;
+}
+
+/* File Explorer Item Labels with unified font */
+.monaco-tree .monaco-tree-row .label-name,
+.monaco-list .monaco-list-row .monaco-icon-label .label-name {
+    font-family: var(--mono-font-stack) !important;
+    font-size: var(--mono-font-size) !important;
+    font-weight: var(--mono-font-weight) !important;
+    color: #FFF !important;
+}
+
+.explorer-item-edited {
+    font-family: var(--mono-font-stack) !important;
+    font-size: var(--mono-font-size) !important;
+}
+
+/* Sidebar title styling */
+.composite.title {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-items: center !important;
+}
+
+.composite.title h2 {
+    font-weight: bold !important;
+    font-size: 12px !important;
+    text-transform: uppercase;
+    color: #bc9abc !important;
+}
+
+/* =============================================================================
+   4. TITLE BAR STYLES
+   ============================================================================= */
+
+/* Project title styling */
+.monaco-workbench .part.titlebar > .titlebar-container > .titlebar-center > .window-title > .command-center .action-item.command-center-center {
+    border: none !important;
+    background: transparent !important;
+}
+
+.titlebar-left {
+    justify-content: flex-end !important;
+    flex-grow: 0 !important;
+    width: 75px !important;
+}
+
+.titlebar-right > * {
+    display: none !important;
+}
+
+.command-center-center {
+    width: auto !important;
+}
+
+/* =============================================================================
+   5. SEARCH INTERFACE
+   ============================================================================= */
+
+/* Search Label */
+.search-label {
+    font-family: var(--mono-font-stack) !important;
+    font-size: var(--mono-font-size) !important;
+    color: #fff;
+    display: block;
+}
+
+/* Hide search icons */
+.search-icon,
+.codicon-search::before,
+.codicon-arrow-right,
+.codicon-arrow-left {
+    display: none !important;
+}
+
+/* =============================================================================
+   6. COMMAND PALETTE STYLES
+   ============================================================================= */
+
+/* Command Palette main container */
+.quick-input-widget {
+    transform: translateY(-50%) !important;
+    top: 50% !important;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, .35) !important;
+    padding: 10px 10px 18px 10px !important;
+    background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
+    backdrop-filter: blur(3px) !important;
+    border-radius: 20px !important;
+}
+
+.quick-input-list,
+.quick-input-list .list_id_6 {
+    min-height: 400px !important;
+}
+
+/* Remove background for lists */
+.monaco-list-rows {
+    background: transparent !important;
+}
+
+/* Command palette text input */
+.quick-input-filter .monaco-inputbox {
+    border-radius: 12px !important;
+    padding: 16px !important;
+    border: none !important;
+    font-family: var(--mono-font-stack) !important;
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+/* Blur backdrop element */
+#command-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .15);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(8px);
+}
+
+/* Actions after command palette text input */
+.quick-input-inline-action-bar .actions-container .action-item {
+    margin-bottom: 16px !important;
+}
+
+.quick-input-header {
+    align-items: center;
+}
+
+/* Command palette input placeholder */
+.monaco-inputbox input::placeholder {
+    color: rgba(255, 255, 255, .3) !important;
+}
+
+/* =============================================================================
+   7. EDITOR WATERMARK & HOME SCREEN
+   ============================================================================= */
+
+/* VS Code home screen container */
+.editor-group-watermark {
+    max-width: none !important;
+}
+
+/* Custom letterpress background with SVG pattern */
+.letterpress {
+    background-image: url("data:image/svg+xml,%3Csvg width='900' height='600' viewBox='0 0 900 600' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='450' width='150' height='149' fill='%235D6E7A' fill-opacity='0.05'/%3E%3Crect x='750' y='450' width='150' height='149' fill='%235D6E7A' fill-opacity='0.05'/%3E%3Crect x='150' y='150' width='150' height='150' fill='%235D6E7A' fill-opacity='0.3'/%3E%3Crect x='599' y='301' width='151' height='149' fill='%235D6E7A' fill-opacity='0.22'/%3E%3Crect x='450' y='450' width='149' height='150' fill='%235D6E7A' fill-opacity='0.05'/%3E%3Crect x='750' y='151' width='150' height='149' fill='%235D6E7A' fill-opacity='0.1'/%3E%3Crect x='300' width='150' height='150' fill='%235D6E7A' fill-opacity='0.1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M363.85 205L379.167 383.204L447.897 403L516.819 383.181L532.15 205.003L363.85 205ZM500.201 247.291L499.242 258.37L498.819 263.281H498.753H448H447.928H418.194L420.119 285.663H447.925H448H491.224H496.903L496.389 291.534L491.437 349.079L491.121 352.768L448 365.164L447.902 365.197L404.744 352.768L401.794 318.448H411.541H422.942L424.442 335.884L447.905 342.454L447.925 342.448L471.426 335.866L473.871 307.521H448H447.928H400.849L395.673 247.291L395.17 241.423H447.928H448H500.707L500.201 247.291Z' fill='%235D6E7A'/%3E%3Cg clip-path='url(%23clip0_277_50)'%3E%3Cpath d='M207.416 203.589L217.282 223.322L206.702 226.848L201.39 205.598L207.416 203.589Z' fill='%235D6E7A'/%3E%3Cpath d='M228.109 236.031L222.922 225.658L235.551 221.448L240.211 228.77L228.109 236.031Z' fill='%235D6E7A'/%3E%3Cpath d='M239.736 215.837L237.249 216.666L235.178 213.41L237.483 212.834L239.736 215.837Z' fill='%235D6E7A'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M191 200C191 194.477 195.477 190 201 190H241C246.523 190 251 194.477 251 200V240C251 245.523 246.523 250 241 250H201C195.477 250 191 245.523 191 240V200ZM210.218 200.249C209.773 199.358 208.741 198.931 207.796 199.246L198.368 202.388C197.376 202.719 196.807 203.757 197.06 204.771L203.346 229.914C203.481 230.454 203.835 230.914 204.324 231.182C204.812 231.45 205.39 231.502 205.919 231.326L219.089 226.936L225.497 239.752C225.746 240.25 226.192 240.622 226.727 240.778C227.262 240.933 227.837 240.859 228.315 240.572L244.029 231.144C244.492 230.866 244.823 230.413 244.947 229.888C245.071 229.363 244.977 228.81 244.688 228.355L239.463 220.145L243.633 218.755C244.243 218.551 244.718 218.067 244.909 217.454C245.101 216.84 244.986 216.172 244.6 215.657L239.886 209.372C239.403 208.728 238.582 208.436 237.801 208.631L231.515 210.203C230.892 210.359 230.381 210.805 230.143 211.402C229.905 211.999 229.968 212.674 230.313 213.217L233.338 217.97L221.116 222.044L210.218 200.249Z' fill='%235D6E7A'/%3E%3C/g%3E%3Cpath d='M856.168 218.085L831.615 193.534C830.959 192.879 830.053 192.474 829.052 192.474C828.051 192.474 827.145 192.879 826.489 193.534L821.402 198.63L827.869 205.097C828.281 204.952 828.756 204.87 829.251 204.87C831.63 204.87 833.557 206.797 833.557 209.177C833.557 209.681 833.471 210.163 833.312 210.613L833.321 210.583L839.55 216.815C839.966 216.667 840.448 216.581 840.949 216.581C843.326 216.581 845.254 218.509 845.254 220.886C845.254 223.264 843.326 225.191 840.949 225.191C838.571 225.191 836.644 223.264 836.644 220.886C836.644 220.299 836.762 219.74 836.974 219.23L836.962 219.259L831.131 213.457V228.746C832.564 229.468 833.529 230.927 833.529 232.61C833.529 234.992 831.598 236.923 829.217 236.923C826.836 236.923 824.904 234.992 824.904 232.61C824.904 231.422 825.384 230.347 826.162 229.567C826.558 229.172 827.029 228.851 827.552 228.626L827.58 228.615V213.176C826.001 212.512 824.914 210.977 824.914 209.19C824.914 208.59 825.036 208.02 825.257 207.5L825.246 207.529L818.891 201.144L802.054 217.97C801.401 218.629 801 219.534 801 220.535C801 221.537 801.403 222.442 802.056 223.1L826.611 247.648C827.265 248.304 828.171 248.709 829.172 248.709C830.173 248.709 831.077 248.304 831.733 247.648L856.172 223.209C856.828 222.555 857.235 221.647 857.235 220.648C857.235 219.649 856.828 218.741 856.172 218.087L856.168 218.085Z' fill='%235D6E7A'/%3E%3C[Additional SVG content omitted for brevity]%3C/svg%3E%0A") !important;
+    background-repeat: no-repeat no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    width: 60% !important;
+}
+
+/* =============================================================================
+   8. UNIFIED FONT SYSTEM - COMPREHENSIVE OVERRIDES
+   ============================================================================= */
+
+/* Title Bar - all text elements */
+.monaco-workbench .part.titlebar,
+.monaco-workbench .part.titlebar .window-title,
+.monaco-workbench .part.titlebar .window-title .monaco-icon-label,
+.monaco-workbench .part.titlebar .window-title .monaco-icon-label .label-name,
+.monaco-workbench .part.titlebar .window-title .monaco-icon-label .description,
+.monaco-workbench .part.titlebar .titlebar-left *:not(.codicon),
+.monaco-workbench .part.titlebar .titlebar-center *:not(.codicon),
+.monaco-workbench .part.titlebar .titlebar-right *:not(.codicon) {
+    font-family: var(--mono-font-stack) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: var(--mono-font-size) !important;
+}
+
+/* Quick Open / Command Palette - all text elements */
+.monaco-workbench .quick-input-widget .quick-input-filter .monaco-inputbox input,
+.monaco-workbench .quick-input-widget .quick-input-filter .monaco-inputbox input::placeholder,
+.monaco-workbench .quick-input-widget .quick-input-list .monaco-list-row,
+.monaco-workbench .quick-input-widget .quick-input-list .monaco-list-row .monaco-icon-label .label-name,
+.monaco-workbench .quick-input-widget .quick-input-list .monaco-list-row .monaco-icon-label .description,
+.monaco-workbench .quick-input-widget .quick-input-title,
+.monaco-workbench .quick-input-widget .quick-input-header,
+.monaco-workbench .quick-input-widget .quick-input-count,
+.monaco-workbench .quick-input-widget .monaco-keybinding,
+.monaco-workbench .quick-input-widget .monaco-keybinding .monaco-keybinding-key {
+    font-family: var(--mono-font-stack) !important;
+    font-size: var(--mono-font-size) !important;
+    font-weight: var(--mono-font-weight) !important;
+}
+
+/* Editor Tabs and Breadcrumbs */
+.monaco-workbench .part.editor .editor-group-container .title .tabs-container .tab .monaco-icon-label .label-name,
+.monaco-workbench .part.editor .editor-group-container .title .tabs-container .tab .monaco-icon-label .description,
+.monaco-workbench .part.editor .breadcrumbs-control,
+.monaco-workbench .part.editor .breadcrumbs-control .monaco-breadcrumb-item,
+.monaco-workbench .part.editor .breadcrumbs-control .monaco-icon-label .label-name,
+.monaco-workbench .part.editor .breadcrumbs-control .monaco-icon-label .description,
+.monaco-workbench .part.editor .monaco-breadcrumbs,
+.monaco-workbench .part.editor .monaco-breadcrumbs .monaco-breadcrumb-item,
+.monaco-workbench .part.editor .editor-group-container .title *:not(.codicon),
+.monaco-workbench .part.editor .editor-group-container .title .monaco-icon-label,
+.monaco-workbench .part.editor .editor-group-container .title .monaco-icon-label .label-name,
+.monaco-workbench .part.editor .editor-group-container .title .title-label,
+.monaco-workbench .part.editor .editor-group-container .title .editor-label {
+    font-family: var(--mono-font-stack) !important;
+    font-weight: var(--mono-font-weight) !important;
+    font-size: 13px !important;
+}
+
+/* Open Editors section */
+.monaco-workbench .part.sidebar .open-editors .monaco-list-row .monaco-icon-label .label-name,
+.monaco-workbench .part.sidebar .open-editors .monaco-list-row .monaco-icon-label .description {
+    font-family: var(--mono-font-stack) !important;
+    font-size: var(--mono-font-size) !important;
+    font-weight: var(--mono-font-weight) !important;
+}
+
+/* Preserve codicon font family for all icons */
+.monaco-workbench .codicon {
+    font-family: codicon !important;
+}
+
+/* =============================================================================
+   END OF CUSTOM THEME
+   ============================================================================= */
